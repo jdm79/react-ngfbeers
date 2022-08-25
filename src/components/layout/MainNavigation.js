@@ -11,7 +11,7 @@ function MainNavigation() {
                         <Link to='/'>Home Page</Link>
                     </li>
                     <li>
-                        <Link to='/companies'>Companies Page</Link>
+                        <Link to='/companies'>Beer Companies</Link>
                     </li>
                     <li>
                         <Link to='/about'>About</Link>
