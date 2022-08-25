@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import React from "react";
+import CompaniesPage from './pages/Companies';
+import CompanyPage from './pages/Company';
+import AboutPage from './pages/About';
+import ContactPage from './pages/Contact';
+import HomePage from './pages/HomePage';
+import MainNavigation from './components/MainNavigation';
+import Beers from "./data.json"
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <div>
+    <MainNavigation />
+    <Switch>
+      <Route path='/' exact>
+        <HomePage />
+      </Route>
+      <Route path='/companies'>
+        <CompaniesPage />
+      </Route>
+      <Route path='/company'>
+        <CompanyPage />
+      </Route>
+      <Route path='/contact'>
+        <ContactPage />
+      </Route>
+      <Route path='/about'>
+        <AboutPage />
+      </Route>
+    </Switch>
+    
+  </div>
 }
 
 export default App;
+
+
