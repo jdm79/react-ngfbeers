@@ -4,11 +4,11 @@ function CompanyItem(props) {
     return (
         <li className={classes.item}>
             <div className={classes.image}>
-                <img src="" alt=""/>
+                <img src={props.image} alt=""/>
             </div>
             <div className={classes.content}>
-                <h3>Company Name</h3>
-                <p>Description</p>
+                <h3>{props.title}</h3>
+                <p>{props.description}</p>
             </div>
             <div className={classes.actions}>
                 <button>To favourites</button>

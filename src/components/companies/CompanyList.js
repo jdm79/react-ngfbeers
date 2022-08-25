@@ -8,7 +8,7 @@ function CompanyList(props) {
                 <CompanyItem 
                     key={company.id} 
                     id={company.id} 
-                    image={company.image}
+                    image={company.image_url}
                     title={company.company}
                     description={company.description}
                 />        
