@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import classes from './MainNavigation.module.css';
 
 function MainNavigation() {
     return <header>
@@ -6,7 +7,10 @@ function MainNavigation() {
         <nav>
             <ul>
                 <li>
-                    <Link to='/'>Companies</Link>
+                    <Link to='/'>Home Page</Link>
+                </li>
+                <li>
+                    <Link to='/companies'>Companies Page</Link>
                 </li>
                 <li>
                     <Link to='/about'>About</Link>

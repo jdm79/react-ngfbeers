@@ -5,9 +5,8 @@ import CompanyPage from './pages/Company';
 import AboutPage from './pages/About';
 import ContactPage from './pages/Contact';
 import HomePage from './pages/HomePage';
-import MainNavigation from './components/MainNavigation';
+import MainNavigation from './components/layout/MainNavigation';
 import Beers from "./data.json"
-import "./App.css";
 
 function App() {
   return <div>
