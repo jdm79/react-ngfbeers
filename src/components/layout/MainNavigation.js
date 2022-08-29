@@ -14,6 +14,9 @@ function MainNavigation() {
                         <Link to='/companies'>Beer Companies</Link>
                     </li>
                     <li>
+                        <Link to='/new-company'>Add new company</Link>
+                    </li>
+                    <li>
                         <Link to='/about'>About</Link>
                     </li>
                     <li>
