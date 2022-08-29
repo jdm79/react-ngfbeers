@@ -1,6 +1,10 @@
+import { useHistory } from 'react-router-dom';
+
 import NewCompanyForm from '../components/companies/NewCompanyForm';
 
-function NewCompanyPage(props) {
+function NewCompanyPage() {
+    const history = useHistory();
+
     function onAddCompanyHandler(companyData) {
         fetch(
             'https://ngfbeers-api-default-rtdb.europe-west1.firebasedatabase.app/companies.json',
@@ -11,7 +15,9 @@ function NewCompanyPage(props) {
                     'Content-Type': 'application/json'
                 }
             }
-        );
+        ).then(() => {
+            history.replace('/');
+        });
     }
 
     return (
