@@ -5,6 +5,7 @@ import CompanyPage from './pages/Company';
 import AboutPage from './pages/About';
 import ContactPage from './pages/Contact';
 import NewCompanyPage from './pages/NewCompany';
+import Favourites from './pages/Favourites';
 import HomePage from './pages/HomePage';
 import Layout from './components/layout/Layout';
 import Beers from "./data.json"
@@ -24,6 +25,9 @@ function App() {
         </Route>
         <Route path='/company'>
           <CompanyPage />
+        </Route>
+        <Route path='/favourites'>
+          <Favourites />
         </Route>
         <Route path='/contact'>
           <ContactPage />

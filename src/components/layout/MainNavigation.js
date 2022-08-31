@@ -1,7 +1,12 @@
+import { useContext } from 'react';
+
 import { Link } from 'react-router-dom';
+import FavoritesContext from '../../store/favourites-context';
 import classes from './MainNavigation.module.css';
 
 function MainNavigation() {
+    const favoritesCtx = useContext(FavoritesContext);
+
     return (
         <header className={classes.header}>
             <div className={classes.logo}>ngfbeers</div>
@@ -15,6 +20,12 @@ function MainNavigation() {
                     </li>
                     <li>
                         <Link to='/new-company'>Add new company</Link>
+                    </li>
+                    <li>
+                        <Link to='/favourites'>
+                            Your favourites
+                            <span className={classes.badge}>{favoritesCtx.totalFavorites}</span>
+                            </Link>
                     </li>
                     <li>
                         <Link to='/about'>About</Link>
